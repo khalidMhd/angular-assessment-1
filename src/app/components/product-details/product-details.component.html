@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-center align-items-center">
+  @if(productDetals !== null) {
+
+  <div class="card text-center" style="width: 400px">
+    <img
+      src="{{ productDetals?.imageUrl }}"
+      class="card-img-top"
+      alt="{{ productDetals?.name }}"
+      height="200px"
+    />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ productDetals?.name }} |
+        {{ productDetals?.price | currency : " PKR " }}
+      </h5>
+      <p class="card-text">
+        {{ productDetals?.description }}
+      </p>
+    </div>
+  </div>
+   } @else {
+    <div>No items found</div>
+    }
+</div>
